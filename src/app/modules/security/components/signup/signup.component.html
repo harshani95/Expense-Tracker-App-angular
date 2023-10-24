@@ -1,0 +1,40 @@
+<form [formGroup]="signupForm" (ngSubmit)="signup()">
+    <div class="outer">
+        <div class="inner">
+        
+            <h4 style="text-align: center;">Sign Up</h4><br>
+
+            <mat-form-field class="form-field" apearance="fill">
+                <mat-label>Email</mat-label>
+                <input formControlName="email" matInput type="email" placeholder="Enter your email">
+            </mat-form-field>
+
+            <mat-form-field class="form-field" apearance="fill">
+                <mat-label> Full Name</mat-label>
+                <input formControlName="name" matInput type="name" placeholder="Enter your Name">
+            </mat-form-field>
+    
+    
+            <mat-form-field class="form-field" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input formControlName="password" matInput [type]="showPassword ? 'text' : 'password'" placeholder="Enter your password">
+                <button mat-button matSuffix (click)="togglePasswordVisibility()">
+                    <mat-icon>{{ showPassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+                </button>
+            </mat-form-field>
+
+            <div *ngIf="registrationSuccess" class="success-message">
+                Registration successful! You can now login.</div>
+             <button type="button" class="btn btn-primary submit-login"  type="submit" [disabled]="signupForm.invalid">Register Now</button>
+    
+    
+             <hr>
+            <p class="text">Or</p>
+            
+            <button type="button" class="btn btn-outline-dark submit-login"routerLink="/security/login">already have an account</button>
+
+   
+
+        </div>
+    </div>
+    </form>

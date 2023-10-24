@@ -1,0 +1,38 @@
+
+
+.outer{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner{
+    width: 400px;
+    height: auto;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.form-field{
+    width: 100%;
+    padding-top: 5px;
+}
+
+.text{
+    text-align: center;
+}
+
+.submit-login{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+mat-icon{
+width: 100%;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}

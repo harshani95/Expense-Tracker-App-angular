@@ -1,0 +1,27 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Note</th>
+            <th>Date</th>
+            <th>Installment</th>
+            <th>Repay Date</th>
+            <th>Cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tempLoan of loan; index as num">
+            <td>{{(num+1)}}</td>
+            <td>{{tempLoan.id}}</td>
+            <td>{{tempLoan.title}}</td>
+            <td>{{tempLoan?.note}}</td>
+            <td>{{tempLoan?.date | date}}</td>
+            <td>{{tempLoan.installment | currency}}</td>
+            <td>{{tempLoan?.repay | date}}</td>
+            <td>{{tempLoan.cost | currency}}</td>
+        
+        </tr>
+    </tbody>
+</table>

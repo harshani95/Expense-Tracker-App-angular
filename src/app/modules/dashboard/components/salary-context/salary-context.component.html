@@ -1,0 +1,21 @@
+
+    <app-dashboard-header [buttonLabel]="'Salary'" [routerLink]="'/dashboard/process/salary'"></app-dashboard-header>
+    
+<div style="padding: 10px;">
+    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        
+    <button routerLink="/dashboard/process/salary/new" type="button" class="btn btn-danger">Add New Salary</button>
+    <button routerLink="/dashboard/process/salary/find" type="button" class="btn btn-warning">All Salary Details </button>
+    <button routerLink="/dashboard/process/salary/update" type="button" class="btn btn-success">Update Salary</button>
+    <button routerLink="/dashboard/process/salary/list" type="button" class="btn btn-primary"> Delete Salary Details</button>
+
+      </div>
+</div>
+<hr>
+<router-outlet></router-outlet>
+    
+ 
+  
+
+
+

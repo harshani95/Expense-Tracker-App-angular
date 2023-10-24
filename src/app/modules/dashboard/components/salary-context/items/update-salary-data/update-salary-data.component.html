@@ -1,0 +1,46 @@
+<br>
+<form [formGroup]="salaryDataForm" (ngSubmit)="update()">
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <div class="form-group">
+                <label for="id">Id</label>
+                <input (keyup.enter)="findData()" type="text" id="id" class="form-control" formControlName="id" placeholder="Enter ID here">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" class="form-control" formControlName="title">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-group">
+                <label for="note">Note</label>
+                <input type="text" id="note" class="form-control" formControlName="note">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-group">
+                <label for="salary">Salary</label>
+                <input type="number" id="salary" class="form-control" formControlName="salary">
+            </div>
+        </div><br>
+        <div class="col-3">
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" class="form-control" formControlName="date">
+            </div><br><br>
+        <div class="col-12">
+            <div style="text-align: right;; margin-top: 20px;">
+                <button [disabled]="disableButton ||salaryDataForm.invalid" type="submit" color="primary" mat-raised-button>Update Salary Data</button>
+            </div>
+            <div *ngIf="isAddSuccess" class="success-message">
+                Successfully Updated Data!
+              </div>
+        </div>
+    </div>
+</div>
+</div>
+</form>
+

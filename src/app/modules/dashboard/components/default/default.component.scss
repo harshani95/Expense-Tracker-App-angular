@@ -1,0 +1,33 @@
+.chart-container{
+    display: inline-block;
+    align-items: center;
+    justify-content: center; 
+    margin-left: 150px; 
+}
+
+.input-container {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 100px;
+    margin-left: 70px; 
+  }
+
+  .input-container div {
+    margin-bottom: 20px;
+  }
+
+ .input-container button{
+    justify-content: flex-end;
+    display: flex;
+    align-items: flex-end;
+  }
+
+ .salary{
+    margin-right: 42px;
+ }
+ .loan{
+    margin-right: 50px;
+ }
+ .expenses{
+    margin-right: 20px;
+ }

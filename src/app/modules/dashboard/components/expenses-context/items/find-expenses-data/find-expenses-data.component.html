@@ -1,0 +1,22 @@
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Index</th>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tempExpense of expense; index as num">
+            <td>{{(num+1)}}</td>
+            <td>{{tempExpense?.id}}</td>
+            <td>{{tempExpense?.title}}</td>
+            <td>{{tempExpense?.description}}</td>
+            <td>{{tempExpense?.cost | currency}}</td>
+        </tr>
+    </tbody>
+</table>
+

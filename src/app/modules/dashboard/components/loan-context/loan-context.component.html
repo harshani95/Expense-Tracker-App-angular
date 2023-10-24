@@ -1,0 +1,16 @@
+
+    <app-dashboard-header [buttonLabel]="'Loan'" [routerLink]="'/dashboard/process/loan'"></app-dashboard-header>
+ 
+    <div style="padding: 10px;">
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            
+        <button routerLink="/dashboard/process/loan/new" type="button" class="btn btn-danger">Add New Loan</button>
+        <button routerLink="/dashboard/process/loan/find" type="button" class="btn btn-warning">Loan history </button>
+        <button routerLink="/dashboard/process/loan/update" type="button" class="btn btn-success">Update Loan</button>
+        <button routerLink="/dashboard/process/loan/list" type="button" class="btn btn-primary">Delete Loan Details</button>
+    
+          </div>
+    </div>
+    <hr>
+    <router-outlet></router-outlet>
+  

@@ -1,0 +1,18 @@
+
+<app-dashboard-header [buttonLabel]="'Expenses'" [routerLink]="'/dashboard/process/expenses'"></app-dashboard-header>
+
+<div style="padding: 10px;">
+    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        
+    <button routerLink="/dashboard/process/expenses/new" type="button" class="btn btn-danger">Add New Expense</button>
+    <button routerLink="/dashboard/process/expenses/find" type="button" class="btn btn-warning">Expenses history</button>
+    <button routerLink="/dashboard/process/expenses/update" type="button" class="btn btn-success">Update Expense</button>
+    <button routerLink="/dashboard/process/expenses/list" type="button" class="btn btn-primary">Delete Expenses Details</button>
+
+      </div>
+</div>
+<hr>
+<router-outlet></router-outlet>
+
+
+

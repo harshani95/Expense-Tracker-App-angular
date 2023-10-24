@@ -1,0 +1,62 @@
+<br>
+<form [formGroup]="loanDataForm">
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <div class="form-group">
+                <label for="id">Id</label>
+                <input (keyup.enter)="findData()" type="text" id="id" class="form-control" formControlName="id" placeholder="Enter ID here">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input [disabled]="true" type="text" id="title" class="form-control" formControlName="title">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-group">
+                <label for="note">Note</label>
+                <input [disabled]="true" type="text" id="note" class="form-control" formControlName="note">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-group">
+                <label for="note">Date</label>
+                <input [disabled]="true" type="date" id="date" class="form-control" formControlName="date">
+            </div>
+        </div>
+    </div>
+    <br>
+        <div class="row">
+        <div class="col-3">
+            <div class="form-group">
+                <label for="installment">Installment</label>
+                <input [disabled]="true" type="number" id="installment" class="form-control" formControlName="installment">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-group">
+                <label for="repay">Repay Date</label>
+                <input [disabled]="true" type="date" id="repay" class="form-control" formControlName="repay">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-group">
+                <label for="cost">Cost</label>
+                <input [disabled]="true" type="number" id="cost" class="form-control" formControlName="cost">
+            </div>
+        </div>
+        <div class="col-12">
+            <div style="text-align: right;; margin-top: 20px;">
+                <button [disabled]="disableButton || loanDataForm.invalid" type="submit" color="primary" mat-raised-button>Update Loan Data</button>
+            </div>
+            <div *ngIf="isAddSuccess" class="success-message">
+                Successfully Updated Data!
+              </div>
+        </div>
+    </div>
+</div>
+</form>
+
+

@@ -1,0 +1,24 @@
+ 
+ <app-dashboard-header [buttonLabel]="'Dashboard'" ></app-dashboard-header>
+
+    <div class="chart-container">
+      <div #chart></div>
+    </div>
+    <div class="input-container">
+      <div>
+        <label for="salary"><span class="salary">Salary :</span></label>
+       <input type="number" id="salary" [(ngModel)]="newSalary" />
+      </div>
+      <div>
+        <label for="expenses"><span class="expenses">Expenses :</span></label>
+      <input type="number" id="expenses" [(ngModel)]="newExpenses" />
+      </div>
+      <div>
+        <label for="loan"><span class="loan">Loan :</span>  </label>
+       <input type="number" id="loan" [(ngModel)]="newLoan" />
+      </div>
+      <button type="button" class="btn btn-success" (click)="addData()">Add Data</button>
+    </div>
+
+ 
+  

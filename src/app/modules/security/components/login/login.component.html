@@ -1,0 +1,35 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="outer">
+        <div class="inner">
+        
+            <h4 style="text-align: center;">Login</h4><br>
+    
+            <mat-form-field class="form-field" apearance="fill">
+                <mat-label>Email</mat-label>
+                <input formControlName="email" matInput type="email" placeholder="Enter your email">
+            </mat-form-field>
+    
+    
+            <mat-form-field class="form-field" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input formControlName="password" matInput [type]="showPassword ? 'text' : 'password'" placeholder="Enter your password">
+                <button mat-button matSuffix (click)="togglePasswordVisibility()">
+                    <mat-icon>{{ showPassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+                </button>
+            </mat-form-field>
+    
+    
+             <button type="button" class="btn btn-primary submit-login"  type="submit" [disabled]="loginForm.invalid">Login</button>
+    
+    
+             <hr>
+            <p class="text">Or Sign in with</p><br>
+             <div class="social-outer">
+                <button mat-fab color="primary" (click)="GoogleAuth()" type="button">Google</button>
+                <button mat-fab color="primary">Git</button>
+                <button mat-fab color="primary" routerLink="/security/signup">Signup</button>
+             </div>
+        </div>
+    </div>
+    <br>
+    </form>

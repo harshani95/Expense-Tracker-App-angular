@@ -1,0 +1,27 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Note</th>
+            <th>Salary</th>
+            <th>Date</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tempsalary of salary; index as num">
+            <td>{{(num+1)}}</td>
+            <td>{{tempsalary?.id}}</td>
+            <td>{{tempsalary?.title}}</td>
+            <td>{{tempsalary?.note}}</td>
+            <td>{{tempsalary?.salary | currency}}</td>
+            <td>{{tempsalary?.date | date}}</td>
+            <td>
+                <input type="button" (click)="delete(tempsalary?.id)" value="Delete" class="btn btn-sm btn-danger">
+            </td>
+        </tr>
+    </tbody>
+</table>
+

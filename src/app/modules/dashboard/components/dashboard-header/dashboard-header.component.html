@@ -1,0 +1,23 @@
+
+  <div class="header-outer">
+    <div class="menu-icon" (click)="toggleMenu()">
+    <i class="material-symbols-outlined">menu</i>
+</div>
+    <nav class="menu"  [ngClass]="{'expanded': isMenuOpen}">
+        <ul>
+          <li><a routerLink="/dashboard/process/home">Home</a></li>
+          <li><a routerLink="/dashboard/process/salary">Salary</a></li>
+          <li><a routerLink="/dashboard/process/expenses">Expenses</a></li>
+          <li><a routerLink="/dashboard/process/loan">Loan</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="btn btn-light" [routerLink]="routerLink"> {{ buttonLabel }}
+      </button>
+    <div class="inner">
+    <i class="material-symbols-outlined icon-1">circle_notifications</i>
+    <i class="material-symbols-outlined icon-2"> account_circle</i>
+   <!-- <input type="text" class="name" id="user-name" #userNameInput>-->
+    <i class="material-symbols-outlined icon-3" (click)="toggleLogout()">logout</i>
+    <span *ngIf="showLogout" (click)="logout()" class="logout-text">Logout</span>
+    </div>
+</div><br>

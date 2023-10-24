@@ -1,0 +1,24 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Note</th>
+            <th>Salary</th>
+            <th>Date</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tempsalary of salary; index as num">
+            <td>{{(num+1)}}</td>
+            <td>{{tempsalary?.id}}</td>
+            <td>{{tempsalary?.title}}</td>
+            <td>{{tempsalary?.note}}</td>
+            <td>{{tempsalary?.salary | currency}}</td>
+            <td>{{tempsalary?.date | date}}</td>
+        </tr>
+    </tbody>
+</table>
+
